@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple to-do list that saves tasks in your browser.">
+  <title>To-Do List with Local Storage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="todo-app">
+    <section class="todo-card" aria-labelledby="app-title">
+      <header>
+        <p class="eyebrow">STAY ORGANISED</p>
+        <h1 id="app-title">To-Do List</h1>
+        <p class="subtitle">Plan your day, one task at a time.</p>
+      </header>
+
+      <form class="task-form" id="task-form">
+        <label class="sr-only" for="task-input">Add a new task</label>
+        <input id="task-input" name="task" type="text" placeholder="What needs to be done?" maxlength="120" autocomplete="off" required>
+        <button type="submit">Add task</button>
+      </form>
+
+      <div class="task-summary" aria-live="polite">
+        <span id="task-count">0 tasks left</span>
+        <button class="clear-completed" id="clear-completed" type="button">Clear completed</button>
+      </div>
+
+      <ul class="task-list" id="task-list" aria-label="Your tasks"></ul>
+      <p class="empty-state" id="empty-state">Your list is clear. Add a task to get started.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
